@@ -13,21 +13,20 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 
 - (2) Run ``Crawler_16personalities.py`` to automatically submit the saved answers to the MBTI testing website [**16personalities**](https://www.16personalities.com/), and return the results of personality scores, types, and roles.
 
-Note: ``Query_ChatGPT.py`` requires the session token from the ChatGPT interface, and it is free and connected using ChatGPT_lite library. ``Query_InstructGPT.py`` requires the API key generated from your OpenAI account. 
+Note: ``Query_ChatGPT.py`` (Line 160) requires the session token from the ChatGPT interface, and it is free and connected using ChatGPT_lite library. ``Query_InstructGPT.py`` (Line 8) requires the API key generated from your OpenAI account. 
 
 
 ## Configuration
-- In ``Query_InstructGPT.py``, the model can be changed to different [GPT-3 series](https://platform.openai.com/docs/models/overview) such as "text-davinci-003", "text-davinci-002", "text-davinci-001", "text-curie-001", etc. This enables our program to test more LLMs.
+- In ``Query_InstructGPT.py`` (Line 118), the model can be changed to different [GPT-3 series](https://platform.openai.com/docs/models/overview) such as "text-davinci-003", "text-davinci-002", "text-davinci-001", "text-curie-001", etc. This enables our program to test more LLMs.
 ```bash
 response = openai.Completion.create(
-						model="text-davinci-003",  # choose your testing model
-						prompt=first_statement+question,
-						temperature=t,
-						max_tokens=2000,
-						top_p=1,
-						frequency_penalty=0,
-						presence_penalty=0
-					)
+model="text-davinci-003",  # choose your testing model
+prompt=first_statement+question,
+temperature=t,
+max_tokens=2000,
+top_p=1,
+frequency_penalty=0,
+presence_penalty=0)
 ```
 
 ## License
