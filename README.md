@@ -16,6 +16,19 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 Note: ``Query_ChatGPT.py`` requires the session token from the ChatGPT interface, and it is free and connected using ChatGPT_lite library. ``Query_InstructGPT.py`` requires the API key generated from your OpenAI account. 
 
 
+## Configuration
+- In ``Query_InstructGPT.py``, the model can be changed to different [GPT-3 series](https://platform.openai.com/docs/models/overview) such as "text-davinci-003", "text-davinci-002", "text-davinci-001", "text-curie-001", etc. This enables our program to test more LLMs.
+```bash
+response = openai.Completion.create(
+						model="text-davinci-003",  # choose your testing model
+						prompt=first_statement+question,
+						temperature=t,
+						max_tokens=2000,
+						top_p=1,
+						frequency_penalty=0,
+						presence_penalty=0
+					)
+```
 
 ## License
 
