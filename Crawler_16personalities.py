@@ -279,11 +279,11 @@ def judge_main(csv_reader, type):
         # print('Trait:', sess_r.json()['user']['traits']['identity'], (101 + scores[4]) // 2)
 
         # used
-        print('Trait:', 'Extraverted', mind_value)
-        print('Trait:', 'Intuitive', energy_value)
-        print('Trait:', 'Thinking', nature_value)
-        print('Trait:', 'Judging', tactics_value)
-        print('Trait:', 'Assertive', identity_value)
+        print('Trait:', 'Extraverted (E)', mind_value, '|', 'Introverted (I)', 100 - mind_value)
+        print('Trait:', 'Intuitive (N)', energy_value, '|', 'Observant (S)', 100 - energy_value)
+        print('Trait:', 'Thinking (T)', nature_value, '|', 'Feeling (F)', 100 - nature_value)
+        print('Trait:', 'Judging (J)', tactics_value, '|', 'Prospecting (P)', 100 - tactics_value)
+        print('Trait:', 'Assertive (A)', identity_value, '|', 'Turbulent (T)', 100 - identity_value)
         # print('Variant:', sess_r.json()['user']['traits'])
         code, role = judge_16([mind_value, energy_value, nature_value, tactics_value, identity_value])
         print('Character:', sess_r.json()['user']['avatarFull'].split('avatars/')[1].split('.')[0])
@@ -297,11 +297,11 @@ def judge_main(csv_reader, type):
 
 
 def main(file, subject):
-    if subject == 'people' or 'Asian':
+    if subject == 'people' or 'the Asian':
         num = 0
-    elif subject == 'men' or 'American':
+    elif subject == 'men' or 'the American':
         num = 1
-    elif subject == 'women' or 'African':
+    elif subject == 'women' or 'the African':
         num = 2
     print('Subject:', subject)
     mind_value_sum, energy_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum = 0, 0, 0, 0, 0
@@ -349,6 +349,6 @@ if __name__ == "__main__":
     main('ChatGPT/answer_people_men_women.csv', "men")
     main('ChatGPT/answer_people_men_women.csv', "women")
 #     "The Asian", "The American", "The African"
-    main('ChatGPT/answer_Asian_American_African.csv', "Asian")
-    main('ChatGPT/answer_Asian_American_African.csv', "American")
-    main('ChatGPT/answer_Asian_American_African.csv', "African")
+    main('ChatGPT/answer_Asian_American_African.csv', "the Asian")
+    main('ChatGPT/answer_Asian_American_African.csv', "the American")
+    main('ChatGPT/answer_Asian_American_African.csv', "the African")
