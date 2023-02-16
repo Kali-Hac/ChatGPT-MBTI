@@ -20,7 +20,7 @@ Note: ``Query_ChatGPT.py`` (Line 160) requires the session token from the ChatGP
 - In ``Query_InstructGPT.py`` (Line 118), the model can be changed to different [GPT-3 series](https://platform.openai.com/docs/models/overview) such as "text-davinci-003", "text-davinci-002", "text-davinci-001", "text-curie-001", etc. This enables our program to test more LLMs.
 ```bash
 response = openai.Completion.create(
-model="text-davinci-003",  # choose your testing model
+model="text-davinci-003",  # choose your testing LLM
 prompt=first_statement+question,
 temperature=t,
 max_tokens=2000,
