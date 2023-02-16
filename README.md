@@ -9,7 +9,7 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 ```
 
 ## Usage
-- (1) Run ``Query_ChatGPT.py`` and ``Query_InstructGPT.py`` to query personalities of different subjects (**"People", "Men", "Women", "the Asian", "the American", "the African"**). The program will automatically save the answers of ChatGPT and InstructGPT into ``.csv`` files.
+- (1) Run ``Query_ChatGPT.py`` and ``Query_InstructGPT.py`` to query personalities of different subjects (**"People", "Men", "Women", "the Asian", "the American", "the African"**). The program will automatically save the answers of ChatGPT and InstructGPT into ``.csv`` files. We provide two example saved files in ``/ChatGPT`` and ``/InstructGPT``.
 
 - (2) Run ``Crawler_16personalities.py`` to automatically submit the saved answers to the MBTI testing website [16personalities](https://www.16personalities.com/), and return the results of personality scores, types, and roles.
 
