@@ -13,9 +13,9 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 
 - (2) Run ``Crawler_16personalities.py`` to automatically submit the saved answers to the MBTI testing website [16personalities](https://www.16personalities.com/), and return the results of personality scores, types, and roles.
 
-An example result is given as:
+An example result returned from ``Crawler_16personalities.py`` is shown as:
 ```bash
-Subject: the American
+Subject: the Asian
 Trait: Extraverted (E) 52 | Introverted (I) 48
 Trait: Intuitive (N) 48 | Observant (S) 52
 Trait: Thinking (T) 53 | Feeling (F) 47
