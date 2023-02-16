@@ -13,6 +13,19 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 
 - (2) Run ``Crawler_16personalities.py`` to automatically submit the saved answers to the MBTI testing website [16personalities](https://www.16personalities.com/), and return the results of personality scores, types, and roles.
 
+
+```bash
+# We only show the dominant personality tendency
+Subject: people
+Trait: Extraverted 47
+Trait: Intuitive 42
+Trait: Thinking 53
+Trait: Judging 49
+Trait: Assertive 49
+Character: istp-virtuoso
+Dic. Judge: ISTP-T Virtuoso
+```
+
 Note: ``Query_ChatGPT.py`` (Line 160) requires the session token from the ChatGPT interface, and it is free and connected using [ChatGPT_lite](https://github.com/acheong08/ChatGPT-lite) library. ``Query_InstructGPT.py`` (Line 8) requires the API key generated from your OpenAI account. 
 
 
