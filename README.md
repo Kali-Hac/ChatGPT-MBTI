@@ -33,8 +33,8 @@ Note: ``Query_ChatGPT.py`` (Line 160) requires the session token from the ChatGP
 ```bash
 response = openai.Completion.create(
 model="text-davinci-003",  # choose your testing LLM
-prompt=first_statement+question,
-temperature=t,
+prompt=[statement + instruction],
+temperature=1.0,
 max_tokens=2000,
 top_p=1,
 frequency_penalty=0,
