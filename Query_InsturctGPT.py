@@ -11,7 +11,7 @@ start_sequence = "A:"
 restart_sequence = "\nQ: "
 
 # temperature
-t = 0.1
+t = 1.0
 
 # Query subject "people", "Men" or "Women"
 subjects = ['people', 'men', 'women']
