@@ -297,11 +297,11 @@ def judge_main(csv_reader, type):
 
 
 def main(file, subject):
-    if subject == 'people' or 'the Asian':
+    if subject == 'people' or 'barbers':
         num = 0
-    elif subject == 'men' or 'the American':
+    elif subject == 'men' or 'accountants':
         num = 1
-    elif subject == 'women' or 'the African':
+    elif subject == 'women' or 'doctors':
         num = 2
     print('Subject:', subject)
     mind_value_sum, energy_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum = 0, 0, 0, 0, 0
@@ -348,7 +348,7 @@ if __name__ == "__main__":
     main('ChatGPT/answer_people_men_women.csv', "people")
     main('ChatGPT/answer_people_men_women.csv', "men")
     main('ChatGPT/answer_people_men_women.csv', "women")
-#     "The Asian", "The American", "The African"
-    main('ChatGPT/answer_Asian_American_African.csv', "the Asian")
-    main('ChatGPT/answer_Asian_American_African.csv', "the American")
-    main('ChatGPT/answer_Asian_American_African.csv', "the African")
+#     "barbers", "accountants", "doctors"
+    main('ChatGPT/answer_barbers_accountants_doctors.csv', "barbers")
+    main('ChatGPT/answer_barbers_accountants_doctors.csv', "accountants")
+    main('ChatGPT/answer_barbers_accountants_doctors.csv', "doctors")

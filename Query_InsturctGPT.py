@@ -11,18 +11,18 @@ start_sequence = "A:"
 restart_sequence = "\nQ: "
 
 # temperature
-t = 1.0
+t = 0.1
 
 # Query subject "people", "Men" or "Women"
 subjects = ['people', 'men', 'women']
 file_Header = ['people', 'Answers', '', 'men', 'Answers', '', 'women', 'Answers', '']
 f = open('InstructGPT/answer_people_men_women.csv', 'w')
 
-# Query subject "the Asian", "the American" or "the African"
-# subjects = ['the Asian', 'the American', 'the African']
-# file_Header = ['the Asian', 'Answers', '',
-#                'the American', 'Answers', '', 'the African', 'Answers', '']
-# f = open('InstructGPT/answer_Asian_American_African.csv', 'w')
+# Query subject "barbers", "accountants" or "doctors"
+subjects = ['barbers', 'accountants', 'doctors']
+file_Header = ['barbers', 'Answers', '',
+               'accountants', 'Answers', '', 'doctors', 'Answers', '']
+# f = open('InstructGPT/answer_barbers_accountants_doctors.csv', 'w')
 
 # MBTI questions
 ques_list = [' %s regularly make new friends.' ,
