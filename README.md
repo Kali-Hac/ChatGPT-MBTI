@@ -1,7 +1,7 @@
 # Can ChatGPT Judge Human Personalities? <br> A General Evaluation Framework
 
 ## Introduction
-This is a simplified implementation of automated testing codes for “Can ChatGPT Judge Human Personalities? A General Evaluation Framework”. The codes are used to produce **one independent testing** result of LLM personality assessment. User may customize the codes to execute multiple testings to reproduce the complete result in the paper.
+This is a simplified implementation of automated testing codes for “Can ChatGPT Judge Human Personalities? A General Evaluation Framework”. The codes are used to produce **one independent testing** result of personality assessment. User may customize the codes to execute multiple testings to reproduce the complete result in the paper.
 
 ## Environment
 ```bash
