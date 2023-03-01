@@ -1,7 +1,7 @@
 # Can ChatGPT Judge Human Personalities? <br> A General Evaluation Framework
 
 ## Introduction
-This is a simplified implementation of automated testing codes for “Can ChatGPT Judge Human Personalities? A General Evaluation Framework”. The codes are used to reproduce experimental results in the paper.
+This is a simplified implementation of automated testing codes for “Can ChatGPT Judge Human Personalities? A General Evaluation Framework”. The codes are used to produce **one independent testing** result of LLM personality assessment. User may customize the codes to execute multiple testings to reproduce the complete result in the paper.
 
 ## Environment
 ```bash
@@ -15,14 +15,14 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 
 An example result returned from ``Crawler_16personalities.py`` is shown as:
 ```bash
-Subject: the Asian
-Trait: Extraverted (E) 52 | Introverted (I) 48
-Trait: Intuitive (N) 48 | Observant (S) 52
-Trait: Thinking (T) 53 | Feeling (F) 47
-Trait: Judging (J) 51 | Prospecting (P) 49
-Trait: Assertive (A) 53 | Turbulent (T) 47
-Character: estj-executive
-Dic. Judge: ESTJ-A Executive
+Subject: Men
+Trait: Extraverted (E) 59 | Introverted (I) 41
+Trait: Intuitive (N) 62 | Observant (S) 38
+Trait: Thinking (T) 48 | Feeling (F) 52
+Trait: Judging (J) 63 | Prospecting (P) 37
+Trait: Assertive (A) 40 | Turbulent (T) 60
+Character: enfj-protagonist
+Dic. Judge: ENFJ-T Protagonist
 ```
 
 Note: ``Query_ChatGPT.py`` (Line 160) requires the session token from the ChatGPT interface, and it is free and connected using [ChatGPT_lite](https://github.com/acheong08/ChatGPT-lite) library. ``Query_InstructGPT.py`` (Line 8) requires the API key generated from your OpenAI account. 
