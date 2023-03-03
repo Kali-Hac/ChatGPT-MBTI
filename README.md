@@ -31,7 +31,7 @@ Note: ``Query_ChatGPT.py`` (Line 160) requires the session token from the ChatGP
 ## Configuration
 - In ``Query_InstructGPT.py`` (Line 119), the model can be changed to different [GPT-3 series](https://platform.openai.com/docs/models/overview) such as "text-davinci-003", "text-davinci-002", "text-davinci-001", "text-curie-001", etc. This enables our program to test more LLMs.
 
-- **Update on 2 March**: Currently ChatGPT API is available, and users can load its official model “gpt-3.5-turbo” or “gpt-3.5-turbo-0301” in ``Query_InstructGPT.py`` to perform a more stable testing with ChatGPT.
+- **Update on 2 March**: Currently ChatGPT API is available, and users can load its official model "gpt-3.5-turbo" or "gpt-3.5-turbo-0301" in ``Query_InstructGPT.py`` to perform a more stable testing with ChatGPT.
 
 ```bash
 response = openai.Completion.create(
