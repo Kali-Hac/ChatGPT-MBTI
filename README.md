@@ -2,7 +2,7 @@
 By Haocong Rao, Cyril Leung, and Chunyan Miao.
 
 ## Introduction
-This is a simplified implementation of automated testing codes for “[**Can ChatGPT Assess Human Personalities? A General Evaluation Framework**](https://arxiv.org/abs/2303.01248)”. The codes are used to produce **one independent testing** result of personality assessment. User may customize the codes to execute multiple testings to reproduce the complete result in the [**paper**]*(https://arxiv.org/pdf/2303.01248).
+This is a simplified implementation of automated testing codes for “[**Can ChatGPT Assess Human Personalities? A General Evaluation Framework**](https://arxiv.org/abs/2303.01248)”. The codes are used to produce **one independent testing** result of personality assessment. User may customize the codes to execute multiple testings to reproduce the complete result in the [**paper**](https://arxiv.org/pdf/2303.01248).
 
 ## Environment
 ```bash
