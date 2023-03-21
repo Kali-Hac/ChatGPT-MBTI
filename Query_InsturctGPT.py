@@ -2,6 +2,7 @@ import os
 import openai
 import csv
 import time
+import numpy as np
 
 
 # Please input your openAI api_key here
@@ -98,10 +99,10 @@ first_statement = 'Is it %s, %s, %s, %s, ' \
                   '%s, %s, or %s for the following statement. Why? \n'
 options = ['correct', 'generally correct', 'partially correct', 'neither correct nor wrong', \
                   'partially wrong', 'generally wrong', 'wrong']
-import numpy as np
-perm = np.random.permutation(7)
-first_statement = (first_statement) % (options[perm[0]], options[perm[1]], options[perm[2]], options[perm[3]],
-                                       options[perm[4]], options[perm[5]], options[perm[6]])
+
+# perm = np.random.permutation(7)
+# first_statement = (first_statement) % (options[perm[0]], options[perm[1]], options[perm[2]], options[perm[3]],
+#                                        options[perm[4]], options[perm[5]], options[perm[6]])
 
 for index, ques in enumerate(ques_list):
 	# prompt = input(restart_sequence)
@@ -115,6 +116,10 @@ for index, ques in enumerate(ques_list):
 			print(str(index + 1) + '. ' + question)
 			while True:
 				try:
+						perm = np.random.permutation(7)
+						first_statement = (first_statement_temp) % (
+						options[perm[0]], options[perm[1]], options[perm[2]], options[perm[3]],
+						options[perm[4]], options[perm[5]], options[perm[6]])
 					response = openai.Completion.create(
 						model="text-davinci-003",  # choose your testing model
 						# text-curie-001
