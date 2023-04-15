@@ -45,6 +45,17 @@ frequency_penalty=0,
 presence_penalty=0)
 ```
 
+## Citation
+If you find our work useful for your research, please cite our paper
+```bash
+@article{rao2023can,
+  title={Can ChatGPT Assess Human Personalities? A General Evaluation Framework},
+  author={Rao, Haocong and Leung, Cyril and Miao, Chunyan},
+  journal={arXiv preprint arXiv:2303.01248},
+  year={2023}
+}
+```
+
 ## License
 
 ChatGPT-MBTI is released under the MIT License. 
