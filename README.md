@@ -10,9 +10,19 @@ pip install openai, ChatGPT_lite, asyncio, requests, brotli, numpy, csv, json
 ```
 
 ## Usage
-- (1) Run ``Query_ChatGPT.py`` and ``Query_InstructGPT.py`` to query personalities of different subjects (**"People", "Men", "Women", "barbers", "accountants", "doctors"**). The program will automatically save the answers of ChatGPT and InstructGPT into ``.csv`` files. We provide two example saved files in ``/ChatGPT`` and ``/InstructGPT``.
+- The first way (Using ChatGPT_lite Library): Run ``Query_ChatGPT.py`` and ``Query_InstructGPT.py`` to query personalities of different subjects (**"People", "Men", "Women", "barbers", "accountants", "doctors"**). The program will automatically save the answers of ChatGPT and InstructGPT into ``.csv`` files. We provide two example saved files in ``/ChatGPT`` and ``/InstructGPT``.
 
-- (2) Run ``Crawler_16personalities.py`` to automatically submit the saved answers to the MBTI testing website [16personalities](https://www.16personalities.com/), and return the results of personality scores, types, and roles.
+- The second way (Using OpenAI API): Run ``Query_GPT.py`` to query personalities of different subjects by **GPT4 ("gpt-4")**, **ChatGPT ("gpt-3.5-turbo")**, and **InstructGPT ("text-davinci-003")**. The program will automatically save the answers of GPT4, ChatGPT, and InstructGPT into ``.csv`` files. We provide two example saved files in ``/ChatGPT``and ``/InstructGPT``. Note that GPT-4 is currently only accessible to those who have been granted access. Users can apply for the GPT-4 API [**here**](https://openai.com/waitlist/gpt-4). The API key can be viewed [**here**](https://platform.openai.com/account/api-keys).
+
+```bash
+python Query_GPT.py --model ChatGPT --api_key [input your api key]
+
+# Default options: --model GPT4 
+# --model [GPT4, ChatGPT, InstructGPT]
+```
+
+
+- After assessing/saving the MBTI answers of different subjects, simply run ``Crawler_16personalities.py`` to automatically submit the saved answers to the MBTI testing website [16personalities](https://www.16personalities.com/), and return the results of personality scores, types, and roles.
 
 An example result returned from ``Crawler_16personalities.py`` is shown as:
 ```bash
@@ -47,12 +57,6 @@ presence_penalty=0)
 
 - **Update on 16 April**: Currently [ChatGPT_lite](https://github.com/acheong08/ChatGPT-lite) library may not work, so we add the file ``Query_GPT.py`` to use the official OpenAI API for testing **GPT4 ("gpt-4")**, **ChatGPT ("gpt-3.5-turbo")**, and **InstructGPT ("text-davinci-003")**. Note that GPT-4 is currently only accessible to those who have been granted access. Users can apply for the GPT-4 API [**here**](https://openai.com/waitlist/gpt-4). The API key can be viewed [**here**](https://platform.openai.com/account/api-keys).
 
-```bash
-python Query_GPT.py --model ChatGPT --api_key [input your api key]
-
-# Default options: --model GPT4 
-# --model [GPT4, ChatGPT, InstructGPT]
-```
 
 ## Citation
 If you find our work useful for your research, please cite our paper
