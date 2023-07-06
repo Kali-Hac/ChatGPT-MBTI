@@ -3,7 +3,7 @@ import openai
 import csv
 import time
 import argparse
-
+import numpy as np
 
 def main():
 	openai.api_key = args.api_key
@@ -97,15 +97,11 @@ def main():
 	# first_statement = 'Is it correct, generally correct, partially correct, neither correct nor wrong, ' \
 	#                   'partially wrong, generally wrong, or wrong with the following statement. Why? \n'
 
-	first_statement = 'Is it %s, %s, %s, %s, ' \
+	first_statement_ori = 'Is it %s, %s, %s, %s, ' \
 	                  '%s, %s, or %s for the following statement. Why? \n'
 	options = ['correct', 'generally correct', 'partially correct', 'neither correct nor wrong', \
 	           'partially wrong', 'generally wrong', 'wrong']
-	import numpy as np
 
-	perm = np.random.permutation(7)
-	first_statement = (first_statement) % (options[perm[0]], options[perm[1]], options[perm[2]], options[perm[3]],
-	                                       options[perm[4]], options[perm[5]], options[perm[6]])
 	for index, ques in enumerate(ques_list):
 		# prompt = input(restart_sequence)
 		prompt = ques
@@ -115,6 +111,9 @@ def main():
 			contents = []
 			for subject in subjects:
 				question = (ques % subject)
+				perm = np.random.permutation(7)
+				first_statement = (first_statement_ori) % (options[perm[0]], options[perm[1]], options[perm[2]], options[perm[3]],
+				                                       options[perm[4]], options[perm[5]], options[perm[6]])
 				print(str(index + 1) + '. ' + question)
 				while True:
 					try:
