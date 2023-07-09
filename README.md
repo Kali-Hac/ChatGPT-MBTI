@@ -60,11 +60,21 @@ presence_penalty=0)
 - **Update on 9 July**: We develop a desktop application (**LLM-PA-V1.0.exe**) with a friendly UI for the human personality assessment via LLMs. Users can easily utilize this UI to test GPT models (InstructGPT, ChatGPT, GPT-4) on different subjects (60 professions and 5 general people groups) with different questions. The source codes will be released soon.
 
 ## Overview of UI
+- 1. Menu overview
 ![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_menu.png)
+
+- 2. Query different subjects
 ![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_subject.png)
-![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_query.png)
-![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_result.png)
+
+- 3. Make a single-question query
 ![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_single_ques.png)
+
+- 4. Query all questions
+![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_query.png)
+
+- 5. Obtain personality results
+![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/demo_result.png)
+
 
 ## Citation
 If you find our work useful for your research, please cite our paper
