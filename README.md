@@ -58,7 +58,7 @@ presence_penalty=0)
 
 - **Update on [16 April 2023]**: Currently [ChatGPT_lite](https://github.com/acheong08/ChatGPT-lite) library may not work, so we add the file ``Query_GPT.py`` to use the official OpenAI API for testing **GPT4 ("gpt-4")**, **ChatGPT ("gpt-3.5-turbo")**, and **InstructGPT ("text-davinci-003")**. Note that GPT-4 is currently only accessible to those who have been granted access. Users can apply for the GPT-4 API [**here**](https://openai.com/waitlist/gpt-4). The API key can be viewed [**here**](https://platform.openai.com/account/api-keys).
 
-- **Update on [9 July 2023]**: We develop a desktop application (**LLMs-PA-V1.0.exe**) with a friendly UI to visualize the human personality assessment via LLMs. Users can easily utilize this UI to test GPT models (InstructGPT, ChatGPT, GPT-4) on different subjects (60 professions and 5 general people groups) with different questions. The source codes will be released soon. The overview of the current repository can be presented as follows:
+- **Update on [9 July 2023]**: We develop a desktop application (**LLMs-PA-V1.0.exe**) with a friendly UI to visualize the human personality assessment via LLMs. Users can easily utilize this UI to test GPT models (**InstructGPT, ChatGPT, GPT-4**) on different subjects (**60 professions and 5 general people groups**) with different questions. The source codes will be released soon. The overview of the current repository can be presented as follows:
 
 ![image](https://github.com/Kali-Hac/ChatGPT-MBTI/blob/main/img/overview.png)
 
