@@ -1,4 +1,6 @@
 # Can ChatGPT Assess Human Personalities? <br> A General Evaluation Framework
+![](https://img.shields.io/badge/LLMs-VA-v1.O-darkcyan)
+![](https://black.readthedocs.io/en/stable/_static/license.svg)
 <div>
 <div align="left">
     <a href='https://scholar.google.com.sg/citations?hl=zh-CN&user=JkT65uQAAAAJ' target='_blank'>Haocong Rao<sup>1</sup></a>&emsp;
