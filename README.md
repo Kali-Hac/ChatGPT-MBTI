@@ -1,5 +1,16 @@
 # Can ChatGPT Assess Human Personalities? <br> A General Evaluation Framework
 By Haocong Rao, Cyril Leung, and Chunyan Miao.
+<div>
+<div align="center">
+    <a href='' target='_blank'>Haocong Rao<sup>1</sup></a>&emsp;
+    <a href='' target='_blank'>Yuanhan Zhang<sup>1</sup></a>&emsp;
+    <a href='' target='_blank'>Liangyu Chen<sup>1</sup></a>&emsp;
+</div>
+<div>
+<div align="center">
+    <sup>1</sup>LILY Research Centre, Nanyang Technological University&emsp;
+</div>
+ 
 
 ## Introduction
 This is a simplified implementation of automated testing codes for “[**Can ChatGPT Assess Human Personalities? A General Evaluation Framework**](https://arxiv.org/abs/2303.01248)”. The codes are used to produce **one independent testing** result of personality assessment. User may customize the codes to execute multiple testings to reproduce the complete result in the [**paper**](https://arxiv.org/pdf/2303.01248).
