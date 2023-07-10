@@ -81,7 +81,7 @@ presence_penalty=0)
 For more details on these functions, please refer to the framework in our paper.
 
 ## Citation
-If you find our work useful for your research, please cite our paper
+If you found this repository useful, please consider citing:
 ```bash
 @article{rao2023can,
   title={Can {ChatGPT} Assess Human Personalities? A General Evaluation Framework},
