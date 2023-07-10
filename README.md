@@ -7,8 +7,8 @@
 </div>
 <div>
 <div align="left">
-    <sup>*</sup>LILY Research Centre, Nanyang Technological University&emsp;
-    <sup>*</sup>The University of British Columbia&emsp;
+    <sup>1</sup>LILY Research Centre, Nanyang Technological University&emsp;
+    <sup>2</sup>The University of British Columbia&emsp;
 </div>
  
 
