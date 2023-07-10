@@ -1,5 +1,10 @@
 # Can ChatGPT Assess Human Personalities? <br> A General Evaluation Framework
 By Haocong Rao, Cyril Leung, and Chunyan Miao.
+
+<p align="center" width="100%">
+Can ChatGPT Assess Human Personalities? <br> A General Evaluation Framework
+</p>
+
 <div>
 <div align="center">
     <a href='' target='_blank'>Haocong Rao<sup>1</sup></a>&emsp;
