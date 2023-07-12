@@ -3,7 +3,7 @@
 ![](https://black.readthedocs.io/en/stable/_static/license.svg)
 
 
-By Haocong Rao, Cyril Leung, Chunyan Miao.
+By Haocong Rao, Cyril Leung, and Chunyan Miao.
  
 
 ## Introduction
