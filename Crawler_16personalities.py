@@ -279,7 +279,7 @@ def judge_main(csv_reader, type):
         # print('Trait:', sess_r.json()['user']['traits']['identity'], (101 + scores[4]) // 2)
 
         # used
-       print('Trait:', 'Extraverted (E)', energy_value, '|', 'Introverted (I)', 100 - energy_value)
+        print('Trait:', 'Extraverted (E)', energy_value, '|', 'Introverted (I)', 100 - energy_value)
         print('Trait:', 'Intuitive (N)', mind_value, '|', 'Observant (S)', 100 - mind_value)
         print('Trait:', 'Thinking (T)', nature_value, '|', 'Feeling (F)', 100 - nature_value)
         print('Trait:', 'Judging (J)', tactics_value, '|', 'Prospecting (P)', 100 - tactics_value)
