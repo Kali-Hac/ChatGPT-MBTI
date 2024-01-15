@@ -252,14 +252,14 @@ def judge_main(csv_reader, type):
         sess_r = session.get("https://www.16personalities.com/api/session")
 
         scores = sess_r.json()['user']['scores']
-        if sess_r.json()['user']['traits']['mind'] != 'Extraverted':
-            mind_value = 100 - (101 + scores[0]) // 2
+        if sess_r.json()['user']['traits']['energy'] != 'Extraverted':
+            energy_value = 100 - (101 + scores[0]) // 2
         else:
-            mind_value = (101 + scores[0]) // 2
-        if sess_r.json()['user']['traits']['energy'] != 'Intuitive':
-            energy_value = 100 - (101 + scores[1]) // 2
+            energy_value = (101 + scores[0]) // 2
+        if sess_r.json()['user']['traits']['mind'] != 'Intuitive':
+            mind_value = 100 - (101 + scores[1]) // 2
         else:
-            energy_value = (101 + scores[1]) // 2
+            mind_value = (101 + scores[1]) // 2
         if sess_r.json()['user']['traits']['nature'] != 'Thinking':
             nature_value = 100 - (101 + scores[2]) // 2
         else:
@@ -279,20 +279,20 @@ def judge_main(csv_reader, type):
         # print('Trait:', sess_r.json()['user']['traits']['identity'], (101 + scores[4]) // 2)
 
         # used
-        print('Trait:', 'Extraverted (E)', mind_value, '|', 'Introverted (I)', 100 - mind_value)
-        print('Trait:', 'Intuitive (N)', energy_value, '|', 'Observant (S)', 100 - energy_value)
+       print('Trait:', 'Extraverted (E)', energy_value, '|', 'Introverted (I)', 100 - energy_value)
+        print('Trait:', 'Intuitive (N)', mind_value, '|', 'Observant (S)', 100 - mind_value)
         print('Trait:', 'Thinking (T)', nature_value, '|', 'Feeling (F)', 100 - nature_value)
         print('Trait:', 'Judging (J)', tactics_value, '|', 'Prospecting (P)', 100 - tactics_value)
         print('Trait:', 'Assertive (A)', identity_value, '|', 'Turbulent (T)', 100 - identity_value)
         # print('Variant:', sess_r.json()['user']['traits'])
-        code, role = judge_16([mind_value, energy_value, nature_value, tactics_value, identity_value])
+        code, role = judge_16([energy_value, mind_value, nature_value, tactics_value, identity_value])
         print('Character:', sess_r.json()['user']['avatarFull'].split('avatars/')[1].split('.')[0])
         print('Dic. Judge:', code, role)
         print()
-        return mind_value, energy_value, nature_value, tactics_value, identity_value
+        return energy_value, mind_value, nature_value, tactics_value, identity_value
 
-    mind_value, energy_value, nature_value, tactics_value, identity_value = submit(answers[type], str(type))
-    return mind_value, energy_value, nature_value, tactics_value, identity_value
+    energy_value, mind_value, nature_value, tactics_value, identity_value = submit(answers[type], str(type))
+    return energy_value, mind_value, nature_value, tactics_value, identity_value
 
 
 
@@ -304,20 +304,20 @@ def main(file, subject):
     elif subject == 'women' or 'doctors':
         num = 2
     print('Subject:', subject)
-    mind_value_sum, energy_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum = 0, 0, 0, 0, 0
+    energy_value_sum, mind_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum = 0, 0, 0, 0, 0
     code_dic = {}
     role_dic = {}
     # for i in range(1, 16):
         # print(i)
         # file = "./new_GPT_3/" + str(i) + "_perm_record_GPT3_people.csv"
     # file = "./new_" + model  + "/" + str(i) + "_perm_record_" + model + '_' + subject + '.csv'
-    try:
+     try:
         csv_reader = csv.reader(open(file, encoding='UTF-8'))
-        mind_value, energy_value, nature_value, tactics_value, identity_value = judge_main(csv_reader, num)
+        energy_value, mind_value, nature_value, tactics_value, identity_value = judge_main(csv_reader, num)
     except:
         csv_reader = csv.reader(open(file))
-        mind_value, energy_value, nature_value, tactics_value, identity_value = judge_main(csv_reader, num)
-    code, role = judge_16([mind_value, energy_value, nature_value, tactics_value, identity_value])
+        energy_value, mind_value, nature_value, tactics_value, identity_value = judge_main(csv_reader, num)
+    code, role = judge_16([energy_value, mind_value, nature_value, tactics_value, identity_value])
     if code not in code_dic.keys():
         code_dic[code] = 1
     else:
@@ -326,8 +326,8 @@ def main(file, subject):
         role_dic[role] = 1
     else:
         role_dic[role] += 1
-    mind_value_sum += mind_value
     energy_value_sum += energy_value
+    mind_value_sum += mind_value
     nature_value_sum += nature_value
     tactics_value_sum += tactics_value
     identity_value_sum += identity_value
@@ -338,7 +338,7 @@ def main(file, subject):
     # tactics_value_sum //= 15
     # identity_value_sum //= 15
     # print([mind_value_sum, energy_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum])
-    code, role = judge_16([mind_value_sum, energy_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum])
+    code, role = judge_16([energy_value_sum, mind_value_sum, nature_value_sum, tactics_value_sum, identity_value_sum])
     # print(code_dic)
     # print(role_dic)
     # print(code, role)
